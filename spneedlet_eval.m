@@ -4,11 +4,6 @@ function psi = spneedlet_eval( theta, phi, B, j_max )
 %   spneedlet_eval( theta, phi, B, j_max ) evaluates the spherical needlets psi_jk,
 %   j=0,1,...,j_max, k=1,2,...,Npix, at the point (theta, phi) with the parameter B.
 %   The return value psi is a cell.
-%
-%   This function depends on inv_spharmonic_tran, which achieves the
-%   function of inverse spherical harmonic transform.
-%
-%   Written by Minjie Fan
 
 psi = cell(j_max+1,1);
 
