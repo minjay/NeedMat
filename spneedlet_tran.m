@@ -1,4 +1,4 @@
-function beta = spneedlet_tran( fun_sample_file, l_max, B )
+function beta = spneedlet_tran( coef, l_max, B )
 %SPNEEDLET_TRAN Needlet transform.
 %
 %   spneedlet_tran( fun_sample_file, l_max, B ) does a needlet transform of
@@ -19,10 +19,6 @@ j_max = fix( log(l_max)/log(B)+1 );
 if abs(j_max-(log(l_max)/log(B)+1))<eps
     j_max = j_max-1;
 end
-
-%do the spherical harmonic transform
-bw = l_max+1;
-coef = spharmonic_tran( fun_sample_file, bw );
 
 %do the needlet transform, in which we:
 %(1)    evaluate the window function b before doing the transform
