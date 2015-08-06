@@ -1,24 +1,24 @@
 function beta = spneedlet_tran( coef, l_max, B )
 %SPNEEDLET_TRAN Needlet transform.
 %
-%   spneedlet_tran( fun_sample_file, l_max, B ) does a needlet transform of
-%   the function whose samples are given in the file with name
-%   fun_sample_file. l_max+1 is the bandwidth of the function. B (B>1)
-%   represents the parameter in the needlet transform. The return value
-%   beta gives the spherical needlet coefficients.
+%   spneedlet_tran( coef, l_max, B ) 
 %
-%   This function depends on spharmonic_tran, inv_spharmonic_tran and pix2ang in the package
-%   MEALPix.
-%
-%   Written by Minjie Fan
+% Inputs:
+%   coef - the spherical harmonic coefficients. coef[i, j] gives a[l,
+%   m]=a[i-1, j-l_max-1]
+%   l_max - the maximal value of l
+%   B - the parameter
+% Outputs:
+%   beta - the needlet coefficients
 
 t = cputime;
 
-%compute j_max from the inequality B^{j-1}<=l_max
-j_max = fix( log(l_max)/log(B)+1 );
-if abs(j_max-(log(l_max)/log(B)+1))<eps
-    j_max = j_max-1;
+%compute j_max from the inequality ceil(B^{j-1})<=l_max
+j_max = 0;
+while ceil(B^(j_max-1))<=l_max
+    j_max = j_max+1;
 end
+j_max = j_max-1;
 
 %do the needlet transform, in which we:
 %(1)    evaluate the window function b before doing the transform
@@ -39,7 +39,11 @@ end
 for j = 0:j_max
     disp(['j = ', num2str(j), ' starts...']);
     %compute Nside by the inequality Nside>=[B^{j+1}]/2
-    Nside = 2^max((ceil(log2(fix(B^(j+1)))-1)), 0);
+    Nside = 1;
+    lb = floor(B^(j+1));
+    while 2*Nside<lb
+        Nside = Nside*2;
+    end
     disp(['Nside = ', num2str(Nside)])
     
     Nring = 4*Nside-1;
