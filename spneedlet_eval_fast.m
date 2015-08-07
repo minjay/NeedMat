@@ -1,11 +1,9 @@
-function psi = spneedlet_eval_fast(B, j, bl_vector, dist, sqrt_lambda)
+function psi = spneedlet_eval_fast(B, j, bl_vector, P, dist, sqrt_lambda)
 
 l_min = ceil(B^(j-1));
 l_max = floor(B^(j+1));
 
 n = length(dist);
-
-P = p_polynomial_value( n, l_max, dist );
 
 psi = zeros(n, 1);
 
