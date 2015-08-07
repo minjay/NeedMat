@@ -6,12 +6,7 @@ phi = linspace(0, 2*pi, res);
 j_max = j;
 l_max = floor(B^(j_max+1));
 
-bl_vector = zeros(j_max+1,l_max);
-for j = 0:j_max
-    for l = 1:l_max
-        bl_vector(j+1, l) = fun_b(l/B^j, B)*(2*l+1)/(4*pi);
-    end
-end
+bl_vector = get_bl_vector(B, j_max, l_max);
 
 Nside = 1;
 lb = floor(B^(j+1));
@@ -40,7 +35,9 @@ for i = 1:n
     dist(i) = sum([x(i) y(i) z(i)].*[x_xi y_xi z_xi]);
 end
 
-psi = spneedlet_eval_fast(B, j, bl_vector, dist, sqrt_lambda);
+P = p_polynomial_value( n, l_max, dist );
+
+psi = spneedlet_eval_fast(B, j, bl_vector, P, dist, sqrt_lambda);
 
 f = reshape(psi, res/2, res);
 
@@ -56,5 +53,6 @@ pcolor(HX, HY, f);
 axis equal
 axis tight
 shading flat
+colorbar
 
 end
