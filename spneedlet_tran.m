@@ -13,12 +13,10 @@ function beta = spneedlet_tran( coef, l_max, B )
 
 t = cputime;
 
+bw = l_max+1;
+
 %compute j_max from the inequality ceil(B^{j-1})<=l_max
-j_max = 0;
-while ceil(B^(j_max-1))<=l_max
-    j_max = j_max+1;
-end
-j_max = j_max-1;
+j_max = get_j_max(B, l_max);
 
 %do the needlet transform, in which we:
 %(1)    evaluate the window function b before doing the transform
