@@ -1,7 +1,7 @@
-function map = inv_spharmonic_tran( alm, Npix, Nring, pre_legendre, tp, pixList, bw, l_st, l_en )
+function map = inv_spharmonic_tran(alm, Npix, Nring, pre_legendre, tp, pixList, bw, l_st, l_en)
 
 %init
-map = zeros(1, Npix);
+map = zeros(Npix, 1);
 
 temp_mat = zeros(l_en-l_st+1, Nring);
 for l = l_st:l_en
