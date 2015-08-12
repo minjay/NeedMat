@@ -1,4 +1,4 @@
-function beta = spneedlet_tran( coef, l_max, B )
+function beta = spneedlet_tran(coef, l_max, B)
 %SPNEEDLET_TRAN Needlet transform.
 %
 %   spneedlet_tran( coef, l_max, B ) 
