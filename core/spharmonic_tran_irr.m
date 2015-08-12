@@ -1,4 +1,4 @@
-function alm = spharmonic_tran_irr(theta, phi, l_max, f)
+function alm = spharmonic_tran_irr(theta, phi, f, l_max)
 
 n = length(theta);
 
