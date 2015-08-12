@@ -5,7 +5,7 @@ while ceil(B^(j_max-1))<=l_max
     j_max = j_max+1;
 end
 j_max = j_max-1;
-if ceil(B^(j_max-1))==B^(j_max-1)
+if ceil(B^(j_max-1))==B^(j_max-1) && ceil(B^(j_max-1))==l_max
     j_max = j_max-1;
 end
 
