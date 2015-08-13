@@ -20,6 +20,8 @@ j_max = get_j_max(B, l_max);
 beta = cell(j_max+1, 1);
 
 b_vector = get_b_vector(B, j_max, l_max);
+
+blmj = zeros(size(alm));
     
 for j = 0:j_max
     disp(['j = ', num2str(j), ' starts...']);
@@ -33,7 +35,6 @@ for j = 0:j_max
     l_st = ceil(B^(j-1));
     l_en = min(floor(B^(j+1)), l_max);
     
-    blmj = alm;
     for l = l_st:l_en
         blmj(l+1, bw:l+bw) = alm(l+1, bw:l+bw)*b_vector(j+1, l);
     end
