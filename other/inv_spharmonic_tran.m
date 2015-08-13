@@ -1,35 +1,35 @@
-function map = inv_spharmonic_tran(alm, Npix, Nring, pre_legendre, tp, pixList, bw, l_st, l_en)
+function map = inv_spharmonic_tran(blmj, Nside, legendre_norm, bw, l_st, l_en)
 
-%init
+% init
+Npix = 12*Nside^2;
+Nring = 4*Nside-1;
+pixList = inRing(Nside, 1:Nring);
+tp = pix2ang(Nside, 'nest', false);
+n = zeros(Nring, 1);
+phi0 = zeros(Nring, 1);
+for r = 1:Nring
+    n(r) = length(pixList{r});
+    phi0(r) = tp{pixList{r}(1)}(2);
+end
 map = zeros(Npix, 1);
 
-temp_mat = zeros(l_en-l_st+1, Nring);
+legendre_mat = zeros(l_en-l_st+1, Nring);
 for l = l_st:l_en
-    temp_mat(l-l_st+1,:) = pre_legendre{l}(1,:);
+    legendre_mat(l-l_st+1,:) = legendre_norm{l}(1,:);
 end
-%No conj here!
-term1 = alm(l_st+1:l_en+1, bw)'*temp_mat/sqrt(2*pi);
+term1 = reshape(blmj(l_st+1:l_en+1, bw), 1, l_en-l_st+1)*legendre_mat;
 
-temp_mat2 = zeros(l_en, Nring);
-for m = 1:l_en
-    l_st2 = max(m, l_st);
-    temp_mat = zeros(l_en-l_st2+1, Nring);
-    for l = l_st2:l_en
-        temp_mat(l-l_st2+1,:) = pre_legendre{l}(m+1,:);
-    end
-    %we need conj here!!!
-    temp_mat2(m,:) = conj(alm(l_st2+1:l_en+1, m+bw)')*temp_mat/sqrt(2*pi)*(-1)^bitget(m, 1);
-end
+qmr = get_qmr(blmj, Nring, legendre_norm, bw, l_st, l_en);
 
+index = 0;
 for r = 1:Nring
-    for k = 1:length(pixList{r})
-        index = pixList{r}(k);
-        phi = tp{index}(2);
-        temp_vec = exp((1:l_en)*1i*phi);
-        product = temp_vec*temp_mat2(:,r);
-        map(index) = real(term1(r))+2*real(product);
+    tautr = get_tautr(qmr(:, r), l_en, n(r), phi0(r));
+    term2 = ifft(tautr)*n(r); 
+    for p = 1:n(r)
+        index = index+1;
+        map(index) = term1(r)+2*real(term2(p));
     end
 end
 
-
+end
     

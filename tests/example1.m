@@ -95,8 +95,6 @@ A = get_A(B, 0, j_max, theta_vec, phi_vec, n_dist);
 f = cell(j_max+1, 1);
 % hard thresholding
 beta_trunc = beta;
-q4 = quantile(abs(beta_trunc{4}), 0.50);
-beta_trunc{4}(abs(beta_trunc{4})<q4) = 0;
 q5 = quantile(abs(beta_trunc{5}), 0.95);
 beta_trunc{5}(abs(beta_trunc{5})<q5) = 0;
 for j = 0:j_max
