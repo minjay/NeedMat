@@ -1,0 +1,93 @@
+\begin{thebibliography}{14}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Baldi \emph{et~al.}(2009)Baldi, Kerkyacharian, Marinucci and
+  Picard}]{baldi2009}
+Baldi, P., Kerkyacharian, G., Marinucci, D. and Picard, D. (2009) Asymptotics
+  for spherical needlets.
+\newblock \emph{The Annals of Statistics}, \textbf{37}, 1150--1171.
+
+\bibitem[{Doroshkevich \emph{et~al.}(2005)Doroshkevich, Naselsky, Verkhodanov,
+  Novikov, Turchaninov, Novikov, Christensen and Chiang}]{Doroshkevich2005}
+Doroshkevich, A., Naselsky, P., Verkhodanov, O.~V., Novikov, D., Turchaninov,
+  V., Novikov, I., Christensen, P. and Chiang, L.-Y. (2005) Gauss--legendre sky
+  pixelization (glesp) for cmb maps.
+\newblock \emph{International Journal of Modern Physics D}, \textbf{14},
+  275--290.
+
+\bibitem[{G\'orski \emph{et~al.}(2005)G\'orski, Hivon, Banday, Wandelt, Hansen,
+  Reinecke and Bartelmann}]{Gorski-etal05}
+G\'orski, K.~M., Hivon, E., Banday, A.~J., Wandelt, B.~D., Hansen, F.~K.,
+  Reinecke, M. and Bartelmann, M. (2005) Healpix: A framework for
+  high-resolution discretization and fast analysis of data distributed on the
+  sphere.
+\newblock \emph{The Astrophysical Journal}, \textbf{622}, 759.
+
+\bibitem[{Healy \emph{et~al.}(2003)Healy, Jr., Rockmore, Kostelec and
+  Moore}]{Healy-etal03}
+Healy, D.~M., Jr., Rockmore, D.~N., Kostelec, P.~J. and Moore, S. (2003) Ffts
+  for the 2-sphere-improvements and variations.
+\newblock \emph{JOURNAL OF FOURIER ANALYSIS AND APPLICATIONS}, \textbf{9},
+  341--385.
+
+\bibitem[{Hupca \emph{et~al.}(2012)Hupca, Falcou, Grigori and
+  Stompor}]{Hupca-etal12}
+Hupca, I.~O., Falcou, J., Grigori, L. and Stompor, R. (2012) Spherical harmonic
+  transform with gpus.
+\newblock In \emph{Proceedings of the 2011 International Conference on Parallel
+  Processing}, Euro-Par'11,  355--366. Berlin, Heidelberg: Springer-Verlag.
+
+\bibitem[{Kostelec and Rockmore(2004)}]{Kostelec-etal04}
+Kostelec, P.~J. and Rockmore, D.~N. (2004) S2kit: A lite version of
+  spharmonickit.
+
+\bibitem[{Leistedt \emph{et~al.}(2013)Leistedt, McEwen, Vandergheynst and
+  Wiaux}]{Leistedt-2013}
+Leistedt, B., McEwen, J.~D., Vandergheynst, P. and Wiaux, Y. (2013) S2let: A
+  code to perform fast wavelet analysis on the sphere.
+\newblock \emph{Astronomy \& Astrophysics}, \textbf{558}, A128.
+
+\bibitem[{Marinucci and Peccati(2011)}]{Marinucci2011}
+Marinucci, D. and Peccati, G. (2011) \emph{Random fields on the sphere:
+  representation, limit theorems and cosmological applications}, vol. 389.
+\newblock Cambridge University Press.
+
+\bibitem[{Marinucci \emph{et~al.}(2008)Marinucci, Pietrobon, Balbi, Baldi,
+  Cabella, Kerkyacharian, Natoli, Picard and Vittorio}]{Marinucci-etal08}
+Marinucci, D., Pietrobon, D., Balbi, A., Baldi, P., Cabella, P., Kerkyacharian,
+  G., Natoli, P., Picard, D. and Vittorio, N. (2008) Spherical needlets for
+  cosmic microwave background data analysis.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  \textbf{383}, 539--545.
+
+\bibitem[{Narcowich \emph{et~al.}(2006)Narcowich, Petrushev and
+  Ward}]{Narcowich-etal06}
+Narcowich, F., Petrushev, P. and Ward, J. (2006) Localized tight frames on
+  spheres.
+\newblock \emph{SIAM Journal on Mathematical Analysis}, \textbf{38}, 574--594.
+
+\bibitem[{Pietrobon \emph{et~al.}(2010)Pietrobon, Balbi, Cabella and
+  Gorski}]{Pietrobon-etal10}
+Pietrobon, D., Balbi, A., Cabella, P. and Gorski, K.~M. (2010) Needatool: A
+  needlet analysis tool for cosmological data processing.
+\newblock \emph{The Astrophysical Journal}, \textbf{723}, 1.
+
+\bibitem[{Seljebotn(2012)}]{Seljebotn-2012}
+Seljebotn, D. (2012) Wavemoth-fast spherical harmonic transforms by butterfly
+  matrix compression.
+\newblock \emph{The Astrophysical Journal Supplement Series}, \textbf{199}, 5.
+
+\bibitem[{Wendland(1995)}]{Wendland-1995}
+Wendland, H. (1995) Piecewise polynomial, positive definite and compactly
+  supported radial functions of minimal degree.
+\newblock \emph{Advances in Computational Mathematics}, \textbf{4}, 389--396.
+
+\bibitem[{Womersley(2015)}]{Womersley-15}
+Womersley, R.~S. (2015) Efficient spherical designs with good geometric
+  properties.
+\newblock \url{http://web.maths.unsw.edu.au/~rsw/Sphere/EffSphDes/}.
+
+\end{thebibliography}
