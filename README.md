@@ -17,7 +17,7 @@ To ensure compatibility, these two packages are already included in the reposito
 1. `A = get_A(B, j_min, j_max, theta, phi, n_dist)`
 Compute the design matrix A, where A is an N-by-M matrix, N is the number of observations, and M is the number of spherical needlets. `(theta, phi)` gives the locations of these observations, and the spherical needlets are from frequency level `j_min` to `j_max` (inclusively). For fast computation, this function first evaluates the spherical needlets on a very fine grid and then interpolates the values for the query points.
 
-Input:
+>Input:
 
 ..B - the parameter
   
