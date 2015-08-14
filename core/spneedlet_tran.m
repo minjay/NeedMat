@@ -1,15 +1,21 @@
 function beta = spneedlet_tran(alm, l_max, B)
-%SPNEEDLET_TRAN Needlet transform.
+%SPNEEDLET_TRAN   Fast spherical needlet transform. It computes the 
+%needlet coefficients based on the spherical harmonic coefficients alm.
 %
-%   spneedlet_tran( coef, l_max, B ) 
+%   spneedlet_tran(alm, l_max, B) 
 %
 % Inputs:
-%   coef - the spherical harmonic coefficients. coef[i, j] gives a[l,
-%   m]=a[i-1, j-l_max-1]
-%   l_max - the maximal value of l
+%   alm - the spherical harmonic coefficients, (l_max+1)-by-(2*l_max+1)
+%   matrix, alm(l+1, m+l_max+1) is the spherical harmonic coefficient with
+%   subscripts l and m
+%   l_max - the maximal l
 %   B - the parameter
+%
 % Outputs:
-%   beta - the needlet coefficients
+%   beta - the needlet coefficients, (j_max+1)-by-1 cell, the (j+1)-th cell
+%   is the needlet coefficients with subscript j
+%
+% Author: Minjie Fan, 2015
 
 t = cputime;
 
