@@ -11,3 +11,6 @@ To ensure compatibility, these two packages are already included in the reposito
 ### Installation
 1. Download the codes by cloning the repository `git clone https://github.com/minjay/NeedMat`.
 2. Add the repository (including subfolders) to the search path of Matlab.
+
+### Functions (in the folder named core)
+`A = get_A(B, j_min, j_max, theta, phi, n_dist)`
