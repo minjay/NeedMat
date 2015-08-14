@@ -23,7 +23,7 @@ Compute the maximal j, `j_max`.
 4. `[dist, psi] = get_psi(B, j, k, theta, phi)` 
 A wrapper of the function `spneedlet_eval_fast`. It evaluates the spherical needlet with subscripts `j` and `k` at locations `(theta, phi)`.
 5. `map = inv_spharmonic_tran_naive(alm, theta, phi, l_max)`
-A *naive* implementation of the inverse spherical harmonics transform.
+A *naive* implementation of the inverse spherical harmonic transform.
 6. `plot_needlets(B, j, k, res)`
 Plot the spherical needlet with subscripts `j` and `k`.
 7. `Y = spharmonic_eval(l, m, theta, phi)`
