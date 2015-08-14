@@ -1,4 +1,22 @@
-function [dist, psi] = get_psi(B, j, k, theta_vec, phi_vec)
+function [dist, psi] = get_psi(B, j, k, theta, phi)
+%GET_PSI   A wrapper of the function spneedlet_eval_fast. It evaluates the 
+%spherical needlet with subscripts j and k at locations (theta, phi).
+%
+%   [dist, psi] = get_psi(B, j, k, theta, phi)
+%
+% Inputs:
+%   B - the parameter
+%   j, k - the subscripts
+%   theta - the co-latitude of the locations, N-by-1 vector
+%   phi - the longitude of the locations, N-by-1 vector
+%
+% Outputs:
+%   dist - the inner products between the locations and the center of the
+%   spherical needlet, N-by-1 vector
+%   psi - the values of the spherical needlet at the locations, N-by-1
+%   vector
+%
+% Author: Minjie Fan, 2015 
 
 j_max = j;
 l_max = floor(B^(j_max+1));
@@ -14,7 +32,7 @@ theta_xi = tp{k}(1);
 phi_xi = tp{k}(2);
 [x_xi, y_xi, z_xi] = sph2cart(phi_xi, pi/2-theta_xi, 1);
 
-[x, y, z] = sph2cart(phi_vec, pi/2-theta_vec, 1);
+[x, y, z] = sph2cart(phi, pi/2-theta, 1);
 
 n = length(x);
 dist = zeros(n, 1);
