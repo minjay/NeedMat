@@ -99,7 +99,7 @@ f = cell(j_max+1, 1);
 % hard thresholding
 beta_trunc = beta;
 q5 = quantile(abs(beta_trunc{5}), 0.95);
-beta_trunc{5}(abs(beta_trunc{5})<q5) = 0;
+beta_trunc{5}(abs(beta_trunc{5})<=q5) = 0;
 for j = 0:j_max
     f{j+1} = A(:, sum(n_j(1:j+1))-n_j(j+1)+1:sum(n_j(1:j+1)))*beta_trunc{j+1};
 end
