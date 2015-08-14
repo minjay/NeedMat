@@ -1,5 +1,20 @@
 function A = get_A(B, j_min, j_max, theta, phi, n_dist)
-% get design matrix
+%GET_A   Computes the design matrix A.
+%
+%   A = get_A(B, j_min, j_max, theta, phi, n_dist)
+%
+% Inputs:
+%   B - the parameter
+%   j_min - the minimal frequency
+%   j_max - the maximal frequency
+%   theta - the co-latitude of the locations, N-by-1 vector
+%   phi - the longitude of the locations, N-by-1 vector
+%   n_dist - the number of points on the fine grid
+%
+% Outputs:
+%   A - the design matrix, N-by-M matrix
+%
+% Author: Minjie Fan, 2015
 
 N = length(theta);
 [x, y, z] = sph2cart(phi, pi/2-theta, 1);
