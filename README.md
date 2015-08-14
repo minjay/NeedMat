@@ -16,14 +16,23 @@ To ensure compatibility, these two packages are already included in the reposito
 ## Main Functions (in the folder named core)
 1. `A = get_A(B, j_min, j_max, theta, phi, n_dist)`
 Compute the design matrix A, where A is an N-by-M matrix, N is the number of observations, and M is the number of spherical needlets. `(theta, phi)` gives the locations of these observations, and the spherical needlets are from frequency level `j_min` to `j_max` (inclusively). For fast computation, this function first evaluates the spherical needlets on a very fine grid and then interpolates the values for the query points.
+
 Input:
+
   B - the parameter
+  
   j_min - the minimal frequency level
+  
   j_max - the maximal frequency level
+  
   theta - N-by-1 vector, the co-latitude
+  
   phi - N-by-1 vector, the longitude
+  
   n_dist - the number of points on the grid
+  
 Output:
+
   A - N-by-M matrix, the design matrix
 
 2. `Nside = get_Nside(B, j)` 
