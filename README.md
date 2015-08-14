@@ -1,6 +1,7 @@
 ## NeedMat, a Matlab Package for Spherical Needlets
 ### Description
-NeedMat provides a Matlab Package that implements fast spherical needlet transforms and fast spherical needlet evaluations. 
+NeedMat provides a Matlab Package that implements fast spherical needlet transforms and fast spherical needlet evaluations. For more details, please refer to the following technical report:
+**A Note on Spherical Needlets**
 ### Dependencies
 NeedMat is developed on Matlab R2013a. It depends on the following two packages.
 * MEALPix 3.0 (the original link is broken), which is a Matlab implementation of HEALPix based on HEALPix-F90 original source code.
