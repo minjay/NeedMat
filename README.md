@@ -12,12 +12,19 @@ To ensure compatibility, these two packages are already included in the reposito
 1. Download the codes by cloning the repository `git clone https://github.com/minjay/NeedMat`.
 2. Add the repository (including subfolders) to the search path of Matlab.
 
-### Functions (in the folder named core)
+### Main Functions (in the folder named core)
 1. `A = get_A(B, j_min, j_max, theta, phi, n_dist)`
 Compute the design matrix A, where A is an N-by-M matrix, N is the number of observations, and M is the number of spherical needlets. `(theta, phi)` gives the locations of these observations, and the spherical needlets are from frequency level `j_min` to `j_max` (inclusively). For fast computation, this function first evaluate the spherical needlets at a very fine grid and then interpolate the values to the query points.
 2. `Nside = get_Nside(B, j)` 
-Compute Nside.
+Compute `Nside`.
 3. `j_max = get_j_max(B, l_max)` 
-Compute the maximal j.
+Compute the maximal j, `j_max`.
 4. `[dist, psi] = get_psi(B, j, k, theta, phi)` 
-A wrapper of the function `spneedlet_eval_fast`. It evaluates the spherical needlet with subscripts j and k at `(theta, phi)`.
+A wrapper of the function `spneedlet_eval_fast`. It evaluates the spherical needlet with subscripts `j` and `k` at locations `(theta, phi)`.
+5. `map = inv_spharmonic_tran_naive(alm, theta, phi, l_max)`
+A *naive* implementation of the inverse spherical harmonics transform.
+6. `plot_needlets(B, j, k, res)`
+Plot the spherical needlet with subscripts `j` and `k`.
+7. `Y = spharmonic_eval(l, m, theta, phi)`
+Evaluate the spherical harmonic with subscripts `l` and `m` at locations `(theta, phi)`.
+
