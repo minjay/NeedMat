@@ -27,4 +27,7 @@ A *naive* implementation of the inverse spherical harmonics transform.
 Plot the spherical needlet with subscripts `j` and `k`.
 7. `Y = spharmonic_eval(l, m, theta, phi)`
 Evaluate the spherical harmonic with subscripts `l` and `m` at locations `(theta, phi)`.
-
+8. `alm = spharmonic_tran_irr(theta, phi, f, l_max)`
+Spherical harmonic transform for irregularly spaced observations of function `f` at locations `(theta, phi)`. It estimates the spherical harmonic coefficients empirically using the weights determined by Voronoi diagrams.
+9. `beta = spneedlet_tran(alm, l_max, B)`
+Fast spherical needlet transform. It computes the needlet coefficients based on the spherical harmonic coefficients `alm`.
