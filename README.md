@@ -32,3 +32,6 @@ Evaluate the spherical harmonic with subscripts `l` and `m` at locations `(theta
 Spherical harmonic transform for irregularly spaced observations of function `f` at locations `(theta, phi)`. It estimates the spherical harmonic coefficients empirically using the weights determined by Voronoi diagrams.
 9. `beta = spneedlet_tran(alm, l_max, B)`
 Fast spherical needlet transform. It computes the needlet coefficients based on the spherical harmonic coefficients `alm`.
+###Contact
+Please report any bugs to 
+mjfan@ucdavis.edu
