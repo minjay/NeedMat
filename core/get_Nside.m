@@ -2,6 +2,7 @@ function Nside = get_Nside(B, j)
 %GET_NSIDE   Computes Nside.
 %
 %   Nside = get_Nside(B, j)
+%
 % Inputs:
 %   B - the parameter
 %   j - the frequency
