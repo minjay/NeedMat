@@ -1,3 +1,5 @@
+% Example: the running time of the spherical needlet transform
+
 B = 2;
 
 rep = 10;

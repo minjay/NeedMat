@@ -1,4 +1,4 @@
-% Example: Approximation of a Wendland Radial Basis Function
+% Example: the approximation of a Wendland radial basis function
 
 clear
 
