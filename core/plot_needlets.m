@@ -1,4 +1,14 @@
 function plot_needlets(B, j, k, res)
+%PLOT_NEEDLETS   Plots the spherical needlet with subscripts j and k.
+%
+%   plot_needlets(B, j, k, res)
+%
+% Inputs:
+%   B - the parameter
+%   j, k - the subscripts
+%   res - the resolution of the plot
+%
+% Author: Minjie Fan, 2015
 
 theta = linspace(0, pi, res/2);
 phi = linspace(0, 2*pi, res);
