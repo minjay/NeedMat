@@ -1,4 +1,21 @@
 function map = inv_spharmonic_tran_naive(alm, theta, phi, l_max)
+%INV_SPHARMONIC_TRAN_NAIVE   A naive implementation of the inverse 
+%spherical harmonic transform.
+%
+%   map = inv_spharmonic_tran_naive(alm, theta, phi, l_max)
+%
+% Inputs:
+%   alm - the spherical harmonic coefficients, (l_max+1)-by-(2*l_max+1)
+%   matrix, alm(l+1, m+l_max+1) is the spherical harmonic coefficient with
+%   subscripts l and m
+%   theta - the co-latitude of the locations, N-by-1 vector
+%   phi - the longitude of the locations, N-by-1 vector
+%   l_max - the maximal l
+%
+% Outputs:
+%   map - the reconstructed map, N-by-1 vector
+%
+% Author: Minjie Fan, 2015
 
 n = length(theta);
 map = zeros(n, 1);
