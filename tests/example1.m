@@ -60,6 +60,7 @@ lam = pi+0*th;
 plot(xh,yh,'k', 'LineWidth', 2);
 
 axis equal
+axis tight
 axis off
 
 l_max = 16;
