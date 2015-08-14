@@ -8,4 +8,4 @@ NeedMat is developed on Matlab R2013a. It depends on the following two packages.
 
 ### Installation
 1. Download the codes by cloning the repository `git clone https://github.com/minjay/NeedMat`.
-2. 
+2. Add the repository (including subfolders) to the search path of Matlab.
