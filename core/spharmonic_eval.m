@@ -1,6 +1,18 @@
-function Y = spharmonic_eval( l, m, theta, phi )
-%SPHARMONIC_EVAL Evaluates the value of the spherical harmonic Y_{lm} at
-%the point (theta, phi)
+function Y = spharmonic_eval(l, m, theta, phi)
+%SPHARMONIC_EVAL   Evaluates the spherical harmonic with subscripts l and m 
+%at locations (theta, phi).
+%
+%   Y = spharmonic_eval(l, m, theta, phi)
+%
+% Inputs:
+%   l, m - the subscripts
+%   theta - the co-latitude of the locations, N-by-1 vector
+%   phi - the longitude of the locations, N-by-1 vector
+%
+% Outputs:
+%   Y - the values of the spherical harmonic at the locations, N-by-1 vector
+%
+% Author: Minjie Fan, 2015
 
 signM = sign(m);
 m = abs(m);
