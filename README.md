@@ -21,19 +21,19 @@ Compute the design matrix A, where A is an N-by-M matrix, N is the number of obs
 
 > B - the parameter
   
-..j_min - the minimal frequency level
+> j_min - the minimal frequency level
   
-..j_max - the maximal frequency level
+> j_max - the maximal frequency level
   
-..theta - N-by-1 vector, the co-latitude
+> theta - N-by-1 vector, the co-latitude
   
-..phi - N-by-1 vector, the longitude
+> phi - N-by-1 vector, the longitude
   
-..n_dist - the number of points on the grid
+> n_dist - the number of points on the grid
   
-Output:
+> Output:
 
-..A - N-by-M matrix, the design matrix
+> A - N-by-M matrix, the design matrix
 
 2. `Nside = get_Nside(B, j)` 
 Compute `Nside`.
