@@ -1,3 +1,5 @@
+% Example: Approximation of a Wendland Radial Basis Function
+
 clear
 
 % the grid
