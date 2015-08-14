@@ -38,7 +38,7 @@ for j = 1:len_j
             obs(i) = min(obs(i), 1);
             obs(i) = max(obs(i), -1);
         end
-        A(:, index) = interp1(dist, psi{j}, obs);
+        A(:, index) = interp1(dist, psi{j}, obs, 'spline');
     end
 end
 
