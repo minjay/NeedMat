@@ -108,3 +108,15 @@ f_wend_hat2 = alm(1, l_max+1)*sqrt(1/4/pi)+f{1}+f{2}+f{3}+f{4}+f{5};
 f_wend_hat2 = reshape(f_wend_hat2, res/2, res);
 
 plot_interp(theta_mat, phi_mat, f_wend_hat2, res_interp)
+
+figure
+subplot('position',[0.05 0.05 0.9 0.9]);
+[ksf, ksf_x] = ksdensity(beta{5});
+plot(ksf_x, ksf, 'g', 'LineWidth', 2)
+[ksf, ksf_x] = ksdensity(beta{4});
+hold on
+plot(ksf_x, ksf, 'r--', 'LineWidth', 2)
+[ksf, ksf_x] = ksdensity(beta{3});
+plot(ksf_x, ksf, 'b-.', 'LineWidth', 2)
+legend('j = 4', 'j = 3', 'j = 2')
+axis tight
