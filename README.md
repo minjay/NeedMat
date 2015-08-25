@@ -2,6 +2,7 @@
 ## Description
 NeedMat provides a Matlab Package that implements fast spherical needlet transforms and fast spherical needlet evaluations. For more details on the spherical needlets and the package, please refer to the technical report:
 **A Note on Spherical Needlets**
+http://arxiv.org/abs/1508.05406
 ## Dependencies
 NeedMat is developed on Matlab R2013a. It depends on the following three packages.
 * RBFSPHERE Matlab package (http://math.boisestate.edu/~wright/montestigliano/index.html).
