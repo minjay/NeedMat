@@ -6,6 +6,7 @@ http://arxiv.org/abs/1508.05406.
 ## Dependencies
 NeedMat is developed on Matlab R2013a. It depends on the following three packages.
 * RBFSPHERE Matlab package (http://math.boisestate.edu/~wright/montestigliano/index.html).
+According to the author of RBFSPHERE, Grady Wright, the functions are integrated into the package SpherePts (https://github.com/gradywright/spherepts).
 * MEALPix 3.0 (the original link is broken), which is a Matlab implementation of HEALPix based on HEALPix-F90 original source code.
 * Spherical-Harmonic-Transform (https://github.com/polarch/Spherical-Harmonic-Transform), which is a collection of MATLAB routines for the Spherical Harmonic Transform and related manipulations in the spherical harmonic spectrum. Note that NeedMat only uses this package to compute Voronoi diagrams on the sphere.
 
