@@ -39,7 +39,7 @@ function  pixList = inRing(nSide, nRing, varargin)
 
 %% Parse and validate arguments
 p = inputParser;
-p.addRequired('nSide',@qnSide);
+p.addRequired('nSide',@qNSide);
 p.addRequired('nRing',@(n)(qNRing(nSide,n)));
 p.addOptional('phi0',0,@isnumeric);
 p.addOptional('dPhi',2*pi,@isnumeric);
