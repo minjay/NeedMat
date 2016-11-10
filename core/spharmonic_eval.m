@@ -22,7 +22,7 @@ C = (-1)^r/sqrt(2*pi);
 
 P = legendre( l, cos(theta), 'norm' );
 
-Y = C*P(m+1)*exp(1i*m*phi);
+Y = C*P(m+1, :)'.*exp(1i*m*phi);
 
 if 0>signM
     Y = (-1)^r*conj(Y);
