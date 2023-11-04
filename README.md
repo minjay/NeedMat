@@ -38,6 +38,6 @@ Fast spherical needlet transform. It computes the needlet coefficients based on 
 
 ## Contact
 Please report any bugs to 
-mjfan@ucdavis.edu.
+mjfan@ucdavis.edu
 
-My research: [http://anson.ucdavis.edu/~minjay](https://scholar.google.com/citations?user=UlavjOkAAAAJ&hl=en)https://scholar.google.com/citations?user=UlavjOkAAAAJ&hl=en.
+My research: [Google Scholar](https://scholar.google.com/citations?user=UlavjOkAAAAJ&hl=en)
