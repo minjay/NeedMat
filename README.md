@@ -36,8 +36,8 @@ Spherical harmonic transform for irregularly spaced observations of function `f`
 9. `beta = spneedlet_tran(alm, l_max, B)`
 Fast spherical needlet transform. It computes the needlet coefficients based on the spherical harmonic coefficients `alm`.
 
-##Contact
+## Contact
 Please report any bugs to 
 mjfan@ucdavis.edu.
 
-My research: http://anson.ucdavis.edu/~minjay.
+My research: [http://anson.ucdavis.edu/~minjay](https://scholar.google.com/citations?user=UlavjOkAAAAJ&hl=en)https://scholar.google.com/citations?user=UlavjOkAAAAJ&hl=en.
